@@ -1,8 +1,7 @@
 # Tmux TIDAL Plugin
 
 Tmux plugin that shows the current music status for TIDAL 
-
-(OSX only)
+(OSX only, desktop app required)
 
 Introduces the following new status variables:
 
