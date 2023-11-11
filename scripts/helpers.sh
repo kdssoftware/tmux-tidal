@@ -14,19 +14,3 @@ set_tmux_option() {
   local value="$2"
   tmux set-option -gq "$option" "$value"
 }
-
-current_track_property() {
-  local prop="${1}"
-read -r -d '' SCRIPT <<END
-tell application "System Events"
-    tell process "TIDAL"
-        set menuItems to name of menu items of menu "Window" of menu bar 1
-        set lastMenuItem to item -1 of menuItems
-    end tell
-end tell
-
-return lastMenuItem as string
-END
-
-osascript -e "$(printf "${SCRIPT}" "$prop")"
-}

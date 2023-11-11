@@ -2,14 +2,12 @@
 
 CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 source "$CURRENT_DIR/scripts/helpers.sh"
-
 track="#($CURRENT_DIR/scripts/track.sh)"
 music_status="#($CURRENT_DIR/scripts/status.sh)"
 
 track_interpolation="\#{track}"
 status_interpolation="\#{music_status}"
 
-#Backwards compatibility
 tidal_track=track
 tidal_status=music_status
 
@@ -18,8 +16,8 @@ tidal_status_interpolation=status_interpolation
 
 do_interpolation() {
   local output="$1"
-  local output="${output/$track_interpolation/$track}"
   local output="${output/$status_interpolation/$music_status}"
+  local output="${output/$track_interpolation/$track}"
   echo "$output"
 }
 
