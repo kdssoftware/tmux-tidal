@@ -27,6 +27,7 @@ Customize the icons with:
 
 
 ### Screenshots
+<img width="1137" alt="Screenshot 2023-11-11 at 03 24 20" src="https://github.com/kdssoftware/tmux-tidal/assets/10829524/233623a5-251e-46e6-929c-198265a96118">
 
 ### Installation with [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm) (recommended)
 
